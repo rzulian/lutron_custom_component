@@ -27,3 +27,5 @@ Features:
 - binary sensors for Occupancy group
 - buttons to support press, release, hold, double tap, and hold release status
 - added a new `LutronMotorBlind` to support motorized shades/blinds via a Motor output (e.g )
+
+The custom component is loading the `pylutron` branch using `  "requirements": ["git+https://github.com/rzulian/pylutron.git@homeworks-support#pylutron==0.2.6"],` in `manifest.json`.
