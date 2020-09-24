@@ -20,7 +20,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         dev = LutronLight(area_name, device, hass.data[LUTRON_CONTROLLER])
         devs.append(dev)
     
-    for (area_name, device) in hass.data[LUTRON_DEVICES]["led"]:
+    for (area_name, keypad_name, device) in hass.data[LUTRON_DEVICES]["led"]:
         dev = LutronLedLight(area_name, keypad_name, device, hass.data[LUTRON_CONTROLLER])
         devs.append(dev)
 
