@@ -48,7 +48,10 @@ class LutronLight(LutronDevice, LightEntity):
     @property
     def supported_features(self):
         """Flag supported features."""
-        return SUPPORT_BRIGHTNESS
+        supported_features = 0
+        if self._lutron_device.is_dimmable:
+            supported_features = SUPPORT_BRIGHTNESS
+        return supported_features
 
     @property
     def brightness(self):
