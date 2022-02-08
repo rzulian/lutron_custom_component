@@ -17,7 +17,8 @@ This PR is adding:
 
 Features:
 - ability to include a `db_file` to the configuration, so that the Lutron component can cache the data
-```lutron:
+```
+lutron:
   host: 192.168.1.23
   username: lutron
   password: password
