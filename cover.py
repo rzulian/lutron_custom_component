@@ -75,13 +75,13 @@ class LutronMotorBlind(LutronDevice, CoverEntity):
 
     async def async_close_cover(self, **kwargs):
         """Close the cover."""
-        position = 0    
+        self._position = 0    
         self._is_closing = True
         self._lutron_device.start_lowering()
       
     async def async_open_cover(self, **kwargs):
         """Open the cover."""
-        position = 100
+        self._position = 100
         self._is_opening = True
         self._lutron_device.start_raising()
     
@@ -89,7 +89,7 @@ class LutronMotorBlind(LutronDevice, CoverEntity):
     async def async_stop_cover(self, **kwargs):
         """stop the cover."""
         self._lutron_device.stop()
-      
+        self._position = 50
         self._is_opening = False
         self._is_closing = False
 
