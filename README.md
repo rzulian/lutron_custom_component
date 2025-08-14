@@ -1,4 +1,11 @@
 # lutron_custom_component
+
+**IMPORTANT NOTE**
+A new version of this component is available in HACS! You need to search for Lutron LIP. 
+You can find more here https://github.com/rzulian/lutron_lip!
+
+
+
 Lutron custom component for HA using pylutron
 
 This is using a fork of pylutron , which is currently a PR https://github.com/thecynic/pylutron/pull/52 .
